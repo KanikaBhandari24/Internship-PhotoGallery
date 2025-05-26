@@ -59,25 +59,24 @@ function App() {
 
   return (
     <div>
-      <h1 className="rubik text-8xl text-center  mt-5 pb-4 text-[#FFD909] tracking-wider ">
+      <h1 className="rubik text-8xl text-center  mt-5 pb-4 text-[#FFD909] tracking-wider md:text-6xl lg:text-8xl sm:text-3xl
+">
         GALLERY
       </h1>
       <p className="text-center dancing-script tracking-wide text-[#9CDA3F] animate-pulse">Glimpse of us...📸</p>
       <div className="border-t-1 mt-4 border-[#FFD909]"></div>
       
-      <div className="flex flex-wrap justify-center gap-4 mb-5 border-b-1 border-[#FFD909] pb-7 pt-7 dosis bg-[#9CDA3F]">
-        {cate.map((category) => (
-          <button
-            className={`${
-              Filter === category ? "bg-gray-300" : "bg-gray-100"
-            } rounded-sm px-3.5 py-1 cursor-pointer hover:bg-[#FFD909] hover:text-white transition-transform duration-400 hover:scale-130 capitalize text-md hover:rounded-2xl text-[#9CDA3F] font-bold tracking-wide`}
-            onClick={() => setFilter(category)}
-            key={category}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
+      <div className="w-full sm:max-w-full  flex flex-wrap justify-center gap-4 mb-5 border-b border-[#FFD909] pb-7 pt-7 dosis bg-[#9CDA3F]">
+  {cate.map((category) => (
+    <button
+      className={`${Filter === category ? "bg-gray-300" : "bg-gray-100"} rounded-sm px-3.5 py-1 cursor-pointer hover:bg-[#FFD909] hover:text-white transition-transform duration-400 hover:scale-105 capitalize text-md hover:rounded-2xl text-[#9CDA3F] font-bold tracking-wide`}
+      onClick={() => setFilter(category)}
+      key={category}
+    >
+      {category}
+    </button>
+  ))}
+</div>
 
       <Gallery images={filteredImg} />
     </div>
