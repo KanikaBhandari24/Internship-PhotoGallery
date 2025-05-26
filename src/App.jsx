@@ -28,7 +28,6 @@ function App() {
     { name: "life5", src: "./gallery/life5.jpg", category: "team" },
     { name: "team5", src: "./gallery/team5.jpg", category: "team" },
     { name: "team7", src: "./gallery/team7.png", category: "team" },
-    { name: "Delhi", src: "./gallery/Delhi.png", category: "team" },
     // Life
     { name: "life2", src: "./gallery/life2.jpg", category: "life" },
     { name: "life3", src: "./gallery/life3.jpg", category: "life" },
